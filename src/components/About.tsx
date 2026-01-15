@@ -15,17 +15,20 @@ const About = () => {
         </div>
 
         <div className="bg-card rounded-2xl p-8 md:p-10 shadow-soft border border-border card-hover">
-          <p className="text-lg text-foreground leading-relaxed mb-8">
-            Currently working at <span className="font-semibold text-primary">Tata Consultancy Services</span> as a System Engineer, 
-            I leverage expertise in backend development, API design, and server connectivity optimization to create 
-            high-performance software applications. I'm passionate about helping businesses achieve digital presence 
-            and workflow automation with AI.
+          <p className="text-2xl text-foreground leading-relaxed mb-6 font-medium">
+            I'm Vigneash, a <span className="text-primary">growth hacker</span> building real-world solutions with AI.
+          </p>
+          
+          <p className="text-lg text-foreground leading-relaxed mb-6">
+            At <span className="font-semibold text-primary">TCS</span>, I work as a Solution Engineer, designing optimized systems that power high-performance applications.
+          </p>
+          
+          <p className="text-lg text-foreground leading-relaxed mb-6">
+            I've helped <span className="font-semibold text-primary">49+ businesses</span> scale their digital presence and automate workflows using AI-driven solutions.
           </p>
           
           <p className="text-muted-foreground leading-relaxed mb-8">
-            A graduate in Mechanical Engineering from Easwari Engineering College, I bring a unique blend of 
-            technical training and software engineering. My experience as a technical trainer has honed my ability 
-            to deliver impactful education, fostering growth in programming and communication skills.
+            With a background in Mechanical Engineering (SRM Group) and experience as a technical trainer, I combine engineering thinking, communication, and execution to build solutions that scale.
           </p>
 
           {/* Quick Info */}
