@@ -84,7 +84,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-up opacity-0 stagger-5">
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-fade-up opacity-0 stagger-5">
         <div className="flex flex-col items-center gap-2 text-muted-foreground">
           <span className="text-xs font-medium">Scroll to explore</span>
           <div className="w-5 h-8 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-1.5">
