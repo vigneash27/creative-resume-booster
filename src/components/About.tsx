@@ -1,10 +1,17 @@
 import { MapPin, Mail, Linkedin, Globe } from "lucide-react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 px-4 bg-background">
+    <section id="about" className="py-24 px-4 bg-background overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             About Me
           </span>
@@ -12,9 +19,15 @@ const About = () => {
             Building Digital Solutions<br />
             <span className="text-muted-foreground">with AI & Innovation</span>
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="bg-card rounded-2xl p-8 md:p-10 shadow-soft border border-border card-hover">
+        <motion.div 
+          className="bg-card rounded-2xl p-8 md:p-10 shadow-soft border border-border card-hover"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        >
           <p className="text-2xl text-foreground leading-relaxed mb-6 font-medium">
             I'm Vigneash, a <span className="text-primary">growth hacker</span> building real-world solutions with AI.
           </p>
@@ -83,10 +96,16 @@ const About = () => {
               </div>
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Languages */}
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
+        <motion.div 
+          className="mt-8 flex flex-wrap justify-center gap-3"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
             🇬🇧 English (Professional)
           </span>
@@ -96,7 +115,7 @@ const About = () => {
           <span className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium text-foreground">
             🇮🇳 Kannada (Working)
           </span>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

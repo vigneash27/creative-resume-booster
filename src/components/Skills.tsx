@@ -1,4 +1,5 @@
 import { Code, Brain, Rocket, Award } from "lucide-react";
+import { motion } from "framer-motion";
 
 const skillCategories = [
   {
@@ -30,9 +31,15 @@ const certifications = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-4 bg-background">
+    <section id="skills" className="py-24 px-4 bg-background overflow-hidden">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             Expertise
           </span>
@@ -40,14 +47,18 @@ const Skills = () => {
             Skills &<br />
             <span className="text-muted-foreground">Certifications</span>
           </h2>
-        </div>
+        </motion.div>
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {skillCategories.map((category, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-card rounded-2xl p-6 shadow-soft border border-border card-hover"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className={`w-12 h-12 rounded-xl mb-4 flex items-center justify-center ${
                 category.color === 'accent' ? 'bg-accent/10' : 'bg-primary/10'
@@ -69,12 +80,18 @@ const Skills = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Certifications */}
-        <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border border-primary/10">
+        <motion.div 
+          className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border border-primary/10"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <Award className="w-5 h-5 text-primary" />
@@ -97,10 +114,16 @@ const Skills = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Publication */}
-        <div className="mt-8 bg-card rounded-2xl p-6 shadow-soft border border-border">
+        <motion.div 
+          className="mt-8 bg-card rounded-2xl p-6 shadow-soft border border-border"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
               <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,7 +138,7 @@ const Skills = () => {
               <p className="text-sm text-muted-foreground mt-1">Published Research Paper</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

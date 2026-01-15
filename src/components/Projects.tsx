@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Bot, Shield, TrendingUp, Youtube, Instagram, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
@@ -28,44 +29,63 @@ const Projects = () => {
   return (
     <section id="building" className="py-24 px-4 md:px-8 bg-muted/20">
       <div className="max-w-5xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Currently Building
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             What I'm <span className="text-primary">Building</span>
           </h2>
-        </div>
+        </motion.div>
 
         {/* Projects */}
         <div className="space-y-6 mb-10">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden border-border bg-card/50 backdrop-blur-sm card-hover group">
-              <CardContent className="p-0">
-                <div className="flex items-center gap-6 p-6 md:p-8">
-                  <div className={`p-4 rounded-2xl bg-gradient-to-br ${project.gradient} shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                    <project.icon size={32} className={project.iconColor} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Card className="overflow-hidden border-border bg-card/50 backdrop-blur-sm card-hover group">
+                <CardContent className="p-0">
+                  <div className="flex items-center gap-6 p-6 md:p-8">
+                    <div className={`p-4 rounded-2xl bg-gradient-to-br ${project.gradient} shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                      <project.icon size={32} className={project.iconColor} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
+                    <span className="hidden md:inline-flex px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20 shrink-0">
+                      In Progress
+                    </span>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                  <span className="hidden md:inline-flex px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20 shrink-0">
-                    In Progress
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
 
         {/* Personal Brand */}
-        <Card className="overflow-hidden border-border bg-gradient-to-br from-card to-muted/50 card-hover">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Card className="overflow-hidden border-border bg-gradient-to-br from-card to-muted/50 card-hover">
           <CardContent className="p-6 md:p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
               <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 shrink-0">
@@ -101,6 +121,7 @@ const Projects = () => {
             </div>
           </CardContent>
         </Card>
+        </motion.div>
       </div>
     </section>
   );
