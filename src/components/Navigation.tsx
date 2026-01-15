@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +41,10 @@ const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   const navItems = [
@@ -75,6 +87,21 @@ const Navigation = () => {
             <span>{item.label}</span>
           </button>
         ))}
+        
+        {/* Dark Mode Toggle */}
+        <button
+          onClick={toggleTheme}
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-muted hover:bg-muted/80 text-foreground transition-all duration-300 hover:scale-105"
+          aria-label="Toggle dark mode"
+        >
+          {mounted && (
+            theme === "dark" ? (
+              <Sun className="h-5 w-5 transition-transform duration-300" />
+            ) : (
+              <Moon className="h-5 w-5 transition-transform duration-300" />
+            )
+          )}
+        </button>
       </div>
     </nav>
   );
