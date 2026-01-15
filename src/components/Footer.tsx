@@ -1,19 +1,20 @@
+import { MessageCircle } from "lucide-react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="py-8 px-4 bg-background border-t border-border">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="w-8 h-8 rounded-lg bg-foreground text-background flex items-center justify-center">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-          </div>
-          <span className="font-display font-bold text-foreground">Vigneash M</span>
-        </div>
+        <a 
+          href="https://wa.me/916383638254" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-500 hover:bg-green-600 text-white rounded-full font-medium text-sm transition-all duration-300 hover:scale-105 mb-4"
+        >
+          <MessageCircle className="w-4 h-4" />
+          <span>Chat on WhatsApp</span>
+        </a>
         
         <p className="text-sm text-muted-foreground">
           © {currentYear} Vigneash M. All rights reserved.
