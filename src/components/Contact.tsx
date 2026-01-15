@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import { Mail, Linkedin, MessageCircle, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -63,18 +63,18 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://vigneash27.github.io/resumetechanical/"
+            href="https://wa.me/916383638254"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-card rounded-2xl p-6 shadow-soft border border-border card-hover text-center"
           >
-            <div className="w-14 h-14 rounded-2xl bg-foreground/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-foreground/20 transition-colors">
-              <Github className="w-6 h-6 text-foreground" />
+            <div className="w-14 h-14 rounded-2xl bg-[#25D366]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#25D366]/20 transition-colors">
+              <MessageCircle className="w-6 h-6 text-[#25D366]" />
             </div>
-            <h3 className="font-semibold text-foreground mb-1">Portfolio</h3>
-            <p className="text-sm text-muted-foreground">View Projects</p>
-            <div className="mt-3 inline-flex items-center gap-1 text-sm text-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-              Visit <ArrowUpRight className="w-4 h-4" />
+            <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
+            <p className="text-sm text-muted-foreground">+91 6383638254</p>
+            <div className="mt-3 inline-flex items-center gap-1 text-sm text-[#25D366] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              Chat now <ArrowUpRight className="w-4 h-4" />
             </div>
           </a>
         </motion.div>
