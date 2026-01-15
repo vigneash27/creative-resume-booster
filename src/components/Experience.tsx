@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "System Engineer",
+    title: "Solution Engineer",
     company: "Tata Consultancy Services",
     period: "June 2023 - Present",
     location: "Chennai, Tamil Nadu, India",
