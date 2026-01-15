@@ -45,30 +45,36 @@ const Projects = () => {
         </motion.div>
 
         {/* Projects */}
-        <div className="space-y-6 mb-10">
+        <div className="space-y-4 mb-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -4 }}
+              className="group"
             >
-              <Card className="overflow-hidden border-border bg-card/50 backdrop-blur-sm card-hover group">
+              <Card className="overflow-hidden border-border/50 bg-card/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
                 <CardContent className="p-0">
-                  <div className="flex items-center gap-6 p-6 md:p-8">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-br ${project.gradient} shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                      <project.icon size={32} className={project.iconColor} />
-                    </div>
+                  <div className="flex items-center gap-4 p-4 md:p-5">
+                    <motion.div 
+                      className={`p-3 rounded-xl bg-gradient-to-br ${project.gradient} shrink-0`}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    >
+                      <project.icon size={24} className={project.iconColor} />
+                    </motion.div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
+                      <h3 className="text-base md:text-lg font-semibold text-foreground mb-0.5">
                         {project.title}
                       </h3>
-                      <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         {project.description}
                       </p>
                     </div>
-                    <span className="hidden md:inline-flex px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20 shrink-0">
+                    <span className="hidden md:inline-flex px-2.5 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20 shrink-0">
                       In Progress
                     </span>
                   </div>
@@ -80,47 +86,55 @@ const Projects = () => {
 
         {/* Personal Brand */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          whileHover={{ y: -4 }}
+          className="group"
         >
-          <Card className="overflow-hidden border-border bg-gradient-to-br from-card to-muted/50 card-hover">
-          <CardContent className="p-6 md:p-8">
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-              <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 shrink-0">
-                <TrendingUp size={32} className="text-primary" />
-              </div>
-              
-              <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-3 mb-3">
-                  <h3 className="text-xl md:text-2xl font-semibold text-foreground">
-                    Personal Brand
-                  </h3>
-                  <span className="px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
-                    Building to 10K+
-                  </span>
+          <Card className="overflow-hidden border-border/50 bg-card/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+            <CardContent className="p-4 md:p-5">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                <motion.div 
+                  className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 shrink-0"
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <TrendingUp size={24} className="text-primary" />
+                </motion.div>
+                
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <h3 className="text-base md:text-lg font-semibold text-foreground">
+                      Personal Brand
+                    </h3>
+                    <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
+                      Building to 10K+
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Documenting growth, AI use-cases, and real-world problem solving.
+                  </p>
                 </div>
-                <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                  Documenting growth, AI use-cases, and real-world problem solving.
-                </p>
-              </div>
 
-              <div className="flex items-center gap-3 md:ml-auto">
-                {socialPlatforms.map((platform, index) => (
-                  <a
-                    key={index}
-                    href={platform.href}
-                    className="p-3 rounded-xl bg-muted/80 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:-translate-y-1"
-                    aria-label={platform.name}
-                  >
-                    <platform.icon size={22} />
-                  </a>
-                ))}
+                <div className="flex items-center gap-2 md:ml-auto">
+                  {socialPlatforms.map((platform, index) => (
+                    <motion.a
+                      key={index}
+                      href={platform.href}
+                      className="p-2.5 rounded-lg bg-muted/60 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                      aria-label={platform.name}
+                      whileHover={{ scale: 1.15, y: -2 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    >
+                      <platform.icon size={18} />
+                    </motion.a>
+                  ))}
+                </div>
               </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </section>
