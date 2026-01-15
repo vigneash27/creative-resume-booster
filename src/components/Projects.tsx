@@ -21,9 +21,9 @@ const Projects = () => {
   ];
 
   const socialPlatforms = [
-    { icon: Youtube, name: "YouTube", href: "#" },
-    { icon: Instagram, name: "Instagram", href: "#" },
-    { icon: Linkedin, name: "LinkedIn", href: "#" },
+    { icon: Youtube, name: "YouTube", href: "https://www.youtube.com/@VigneashM" },
+    { icon: Instagram, name: "Instagram", href: "https://www.instagram.com/vigneashm" },
+    { icon: Linkedin, name: "LinkedIn", href: "https://www.linkedin.com/in/vigneash-m" },
   ];
 
   return (
@@ -123,6 +123,8 @@ const Projects = () => {
                     <motion.a
                       key={index}
                       href={platform.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-2.5 rounded-lg bg-muted/60 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
                       aria-label={platform.name}
                       whileHover={{ scale: 1.15, y: -2 }}
