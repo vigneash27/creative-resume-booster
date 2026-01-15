@@ -59,44 +59,49 @@ const Hero = () => {
         </div>
 
         {/* Modern Floating Navigation */}
-        <nav className="flex flex-wrap justify-center gap-3 animate-fade-up opacity-0 stagger-4">
+        <nav className="flex flex-wrap justify-center gap-2 md:gap-3 animate-fade-up opacity-0 stagger-4">
           <a 
             href="#about" 
-            className="group flex items-center gap-2 px-5 py-3 bg-card/80 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+            onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}
+            className="group flex items-center gap-2 px-4 md:px-5 py-2.5 md:py-3 bg-card/90 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
           >
-            <span className="text-lg group-hover:scale-110 transition-transform">👤</span>
-            <span className="font-medium text-foreground">About</span>
+            <span className="text-base md:text-lg group-hover:scale-110 transition-transform">👤</span>
+            <span className="font-medium text-sm md:text-base text-foreground">About</span>
           </a>
           <a 
             href="#building" 
-            className="group flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm border border-primary/30 rounded-full shadow-lg hover:shadow-xl hover:from-primary/20 hover:to-accent/20 hover:-translate-y-1 transition-all duration-300"
+            onClick={(e) => { e.preventDefault(); document.getElementById('building')?.scrollIntoView({ behavior: 'smooth' }); }}
+            className="group flex items-center gap-2 px-4 md:px-5 py-2.5 md:py-3 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm border border-primary/30 rounded-full shadow-lg hover:shadow-xl hover:from-primary/20 hover:to-accent/20 hover:-translate-y-1 transition-all duration-300"
           >
-            <span className="relative flex h-2.5 w-2.5">
+            <span className="relative flex h-2 w-2 md:h-2.5 md:w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 md:h-2.5 md:w-2.5 bg-primary"></span>
             </span>
-            <span className="font-medium text-primary">In Progress</span>
+            <span className="font-medium text-sm md:text-base text-primary">In Progress</span>
           </a>
           <a 
             href="#experience" 
-            className="group flex items-center gap-2 px-5 py-3 bg-card/80 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+            onClick={(e) => { e.preventDefault(); document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' }); }}
+            className="group flex items-center gap-2 px-4 md:px-5 py-2.5 md:py-3 bg-card/90 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
           >
-            <span className="text-lg group-hover:scale-110 transition-transform">💼</span>
-            <span className="font-medium text-foreground">Experience</span>
+            <span className="text-base md:text-lg group-hover:scale-110 transition-transform">💼</span>
+            <span className="font-medium text-sm md:text-base text-foreground">Experience</span>
           </a>
           <a 
             href="#skills" 
-            className="group flex items-center gap-2 px-5 py-3 bg-card/80 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+            onClick={(e) => { e.preventDefault(); document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' }); }}
+            className="group flex items-center gap-2 px-4 md:px-5 py-2.5 md:py-3 bg-card/90 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
           >
-            <span className="text-lg group-hover:scale-110 transition-transform">⚡</span>
-            <span className="font-medium text-foreground">Skills</span>
+            <span className="text-base md:text-lg group-hover:scale-110 transition-transform">⚡</span>
+            <span className="font-medium text-sm md:text-base text-foreground">Skills</span>
           </a>
           <a 
             href="#contact" 
-            className="group flex items-center gap-2 px-5 py-3 bg-card/80 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+            onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
+            className="group flex items-center gap-2 px-4 md:px-5 py-2.5 md:py-3 bg-card/90 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
           >
-            <span className="text-lg group-hover:scale-110 transition-transform">📬</span>
-            <span className="font-medium text-foreground">Contact</span>
+            <span className="text-base md:text-lg group-hover:scale-110 transition-transform">📬</span>
+            <span className="font-medium text-sm md:text-base text-foreground">Contact</span>
           </a>
         </nav>
       </div>
