@@ -1,4 +1,4 @@
-import { Code, Brain, Rocket, Award } from "lucide-react";
+import { Code, Brain, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 
 const skillCategories = [
@@ -22,12 +22,6 @@ const skillCategories = [
   },
 ];
 
-const certifications = [
-  "Machine Learning with R Studio",
-  "Python Machine Learning",
-  "Fundamentals of Digital Marketing",
-  "Advanced Python Course",
-];
 
 const Skills = () => {
   return (
@@ -84,7 +78,7 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Certifications */}
+        {/* Things I've Built */}
         <motion.div 
           className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border border-primary/10"
           initial={{ opacity: 0, y: 40 }}
@@ -94,25 +88,27 @@ const Skills = () => {
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-              <Award className="w-5 h-5 text-primary" />
+              <Rocket className="w-5 h-5 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground">Certifications</h3>
+            <h3 className="text-xl font-semibold text-foreground">Things I've Built</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border"
-              >
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="font-medium text-foreground">{cert}</span>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex flex-col items-center p-6 bg-card rounded-xl border border-border text-center">
+              <span className="text-3xl font-bold text-primary mb-2">20+</span>
+              <span className="font-medium text-foreground">Landing Pages</span>
+              <span className="text-sm text-muted-foreground mt-1">High-converting designs</span>
+            </div>
+            <div className="flex flex-col items-center p-6 bg-card rounded-xl border border-border text-center">
+              <span className="text-3xl font-bold text-accent mb-2">9+</span>
+              <span className="font-medium text-foreground">AI Automation Workflows</span>
+              <span className="text-sm text-muted-foreground mt-1">Scalable systems</span>
+            </div>
+            <div className="flex flex-col items-center p-6 bg-card rounded-xl border border-border text-center">
+              <span className="text-3xl font-bold text-primary mb-2">20+</span>
+              <span className="font-medium text-foreground">Content Edited</span>
+              <span className="text-sm text-muted-foreground mt-1">Marketing & Sales focused</span>
+            </div>
           </div>
         </motion.div>
 

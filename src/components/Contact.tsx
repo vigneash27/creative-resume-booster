@@ -16,12 +16,11 @@ const Contact = () => {
             Get in Touch
           </span>
           <h2 className="section-title">
-            Let's Work<br />
+            Let's Work,<br />
             <span className="text-muted-foreground">Together</span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            I'm always open to discussing new opportunities, innovative projects, 
-            or ways to help your business grow with AI and automation.
+          <p className="text-lg text-muted-foreground mt-4 max-w-xl mx-auto italic">
+            "Growth isn't luck. It's engineered."
           </p>
         </motion.div>
 
@@ -90,10 +89,11 @@ const Contact = () => {
         >
           <a
             href="mailto:vigneash2019@gmail.com?subject=Let's%20Work%20Together"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background rounded-xl font-semibold text-lg shadow-soft hover:shadow-hover hover:-translate-y-0.5 transition-all"
+            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full font-medium text-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-foreground/20 hover:scale-105"
           >
-            <span>Start a Conversation</span>
-            <ArrowUpRight className="w-5 h-5" />
+            <span className="relative z-10">Start a Conversation</span>
+            <ArrowUpRight className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
         </motion.div>
       </div>
