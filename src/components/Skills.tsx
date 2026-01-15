@@ -1,5 +1,15 @@
 import { Code, Brain, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
+import { useCountUp } from "@/hooks/useCountUp";
+
+const AnimatedCounter = ({ end, suffix = "+", colorClass = "text-primary" }: { end: number; suffix?: string; colorClass?: string }) => {
+  const { count, ref } = useCountUp({ end, duration: 2000 });
+  return (
+    <span ref={ref} className={`text-3xl font-bold ${colorClass} mb-2`}>
+      {count}{suffix}
+    </span>
+  );
+};
 
 const skillCategories = [
   {
@@ -95,17 +105,17 @@ const Skills = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex flex-col items-center p-6 bg-card rounded-xl border border-border text-center">
-              <span className="text-3xl font-bold text-primary mb-2">20+</span>
+              <AnimatedCounter end={20} />
               <span className="font-medium text-foreground">Landing Pages</span>
               <span className="text-sm text-muted-foreground mt-1">High-converting designs</span>
             </div>
             <div className="flex flex-col items-center p-6 bg-card rounded-xl border border-border text-center">
-              <span className="text-3xl font-bold text-accent mb-2">9+</span>
+              <AnimatedCounter end={9} colorClass="text-accent" />
               <span className="font-medium text-foreground">AI Automation Workflows</span>
               <span className="text-sm text-muted-foreground mt-1">Scalable systems</span>
             </div>
             <div className="flex flex-col items-center p-6 bg-card rounded-xl border border-border text-center">
-              <span className="text-3xl font-bold text-primary mb-2">20+</span>
+              <AnimatedCounter end={20} />
               <span className="font-medium text-foreground">Content Edited</span>
               <span className="text-sm text-muted-foreground mt-1">Marketing & Sales focused</span>
             </div>
