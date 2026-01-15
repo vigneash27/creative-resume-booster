@@ -1,12 +1,35 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import animeAvatar from "@/assets/anime-avatar.png";
 
 const Hero = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 250]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-hero relative overflow-hidden">
-      {/* Background decorative elements */}
+    <section ref={sectionRef} className="min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-hero relative overflow-hidden">
+      {/* Background decorative elements with parallax */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+        <motion.div 
+          style={{ y: y1 }} 
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" 
+        />
+        <motion.div 
+          style={{ y: y2 }} 
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" 
+        />
+        <motion.div 
+          style={{ y: y3 }} 
+          className="absolute top-1/2 right-1/3 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" 
+        />
       </div>
 
       {/* Name watermark */}
