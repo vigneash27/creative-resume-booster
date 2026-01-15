@@ -1,10 +1,17 @@
 import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-4 bg-secondary/30">
+    <section id="contact" className="py-24 px-4 bg-secondary/30 overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             Get in Touch
           </span>
@@ -16,10 +23,16 @@ const Contact = () => {
             I'm always open to discussing new opportunities, innovative projects, 
             or ways to help your business grow with AI and automation.
           </p>
-        </div>
+        </motion.div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        >
           <a
             href="mailto:vigneash2019@gmail.com"
             className="group bg-card rounded-2xl p-6 shadow-soft border border-border card-hover text-center"
@@ -65,10 +78,16 @@ const Contact = () => {
               Visit <ArrowUpRight className="w-4 h-4" />
             </div>
           </a>
-        </div>
+        </motion.div>
 
         {/* CTA */}
-        <div className="text-center">
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
           <a
             href="mailto:vigneash2019@gmail.com?subject=Let's%20Work%20Together"
             className="inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background rounded-xl font-semibold text-lg shadow-soft hover:shadow-hover hover:-translate-y-0.5 transition-all"
@@ -76,7 +95,7 @@ const Contact = () => {
             <span>Start a Conversation</span>
             <ArrowUpRight className="w-5 h-5" />
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

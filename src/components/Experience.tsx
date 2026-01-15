@@ -1,4 +1,5 @@
 import { Building2, GraduationCap, Calendar } from "lucide-react";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -69,9 +70,15 @@ const education = {
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-4 bg-secondary/30">
+    <section id="experience" className="py-24 px-4 bg-secondary/30 overflow-hidden">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             Career Journey
           </span>
@@ -79,7 +86,7 @@ const Experience = () => {
             Work Experience &<br />
             <span className="text-muted-foreground">Education</span>
           </h2>
-        </div>
+        </motion.div>
 
         {/* Timeline */}
         <div className="relative">
@@ -89,7 +96,14 @@ const Experience = () => {
           {/* Experience items */}
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="relative pl-12 md:pl-20">
+              <motion.div 
+                key={index} 
+                className="relative pl-12 md:pl-20"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 {/* Timeline dot */}
                 <div className={`absolute left-2 md:left-6 w-4 h-4 rounded-full border-2 ${
                   exp.current 
@@ -129,11 +143,17 @@ const Experience = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
 
             {/* Education */}
-            <div className="relative pl-12 md:pl-20">
+            <motion.div 
+              className="relative pl-12 md:pl-20"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
               <div className="absolute left-2 md:left-6 w-4 h-4 rounded-full bg-accent border-2 border-accent" />
 
               <div className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl p-6 shadow-soft border border-accent/20">
@@ -151,7 +171,7 @@ const Experience = () => {
                   <span>{education.period}</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
