@@ -1,4 +1,4 @@
-import { MapPin, Mail, Linkedin, Globe } from "lucide-react";
+import { Linkedin, Instagram, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -44,56 +44,36 @@ const About = () => {
             With a background in Mechanical Engineering (SRM Group) and experience as a technical trainer, I combine engineering thinking, communication, and execution to build solutions that scale.
           </p>
 
-          {/* Quick Info */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Location</p>
-                <p className="font-medium text-foreground">Chennai, Tamil Nadu, India</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Mail className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Email</p>
-                <p className="font-medium text-foreground">vigneash2019@gmail.com</p>
-              </div>
-            </div>
-
+          {/* Social Links */}
+          <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="https://www.linkedin.com/in/vigneash-m" 
+              href="https://www.linkedin.com/in/vigneash-m/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl hover:bg-secondary transition-colors"
+              className="flex items-center gap-2 px-5 py-3 bg-secondary/50 rounded-full hover:bg-secondary transition-all duration-300 hover:scale-105"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Linkedin className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">LinkedIn</p>
-                <p className="font-medium text-foreground">vigneash-m</p>
-              </div>
+              <Linkedin className="w-5 h-5 text-primary" />
+              <span className="font-medium text-foreground">LinkedIn</span>
             </a>
 
             <a 
-              href="https://vigneash27.github.io/resumetechanical/" 
+              href="https://www.instagram.com/vigneashm/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl hover:bg-secondary transition-colors"
+              className="flex items-center gap-2 px-5 py-3 bg-secondary/50 rounded-full hover:bg-secondary transition-all duration-300 hover:scale-105"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Globe className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Website</p>
-                <p className="font-medium text-foreground">Personal Portfolio</p>
-              </div>
+              <Instagram className="w-5 h-5 text-primary" />
+              <span className="font-medium text-foreground">Instagram</span>
+            </a>
+
+            <a 
+              href="https://www.youtube.com/@VigneashM" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 bg-secondary/50 rounded-full hover:bg-secondary transition-all duration-300 hover:scale-105"
+            >
+              <Youtube className="w-5 h-5 text-primary" />
+              <span className="font-medium text-foreground">YouTube</span>
             </a>
           </div>
         </motion.div>
