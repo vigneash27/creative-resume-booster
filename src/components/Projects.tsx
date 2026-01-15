@@ -39,7 +39,7 @@ const Projects = () => {
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Currently Building
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="section-title">
             What I'm <span className="text-primary">Building</span>
           </h2>
         </motion.div>
