@@ -49,7 +49,7 @@ const Skills = () => {
           </span>
           <h2 className="section-title">
             Skills &<br />
-            <span className="text-muted-foreground">Certifications</span>
+            <span className="text-muted-foreground">Publications</span>
           </h2>
         </motion.div>
 
