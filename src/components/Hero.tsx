@@ -35,7 +35,6 @@ const Hero = () => {
 
         {/* Main headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-8 animate-fade-up opacity-0 stagger-2">
-          System Engineer &<br />
           <span className="text-gradient">Growth Hacker</span>
         </h1>
 
@@ -59,23 +58,45 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Navigation Pills */}
+        {/* Modern Floating Navigation */}
         <nav className="flex flex-wrap justify-center gap-3 animate-fade-up opacity-0 stagger-4">
-          <a href="#about" className="nav-pill">
-            <span className="text-lg">👤</span>
-            <span>About</span>
+          <a 
+            href="#about" 
+            className="group flex items-center gap-2 px-5 py-3 bg-card/80 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+          >
+            <span className="text-lg group-hover:scale-110 transition-transform">👤</span>
+            <span className="font-medium text-foreground">About</span>
           </a>
-          <a href="#experience" className="nav-pill">
-            <span className="text-lg">💼</span>
-            <span>Experience</span>
+          <a 
+            href="#building" 
+            className="group flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm border border-primary/30 rounded-full shadow-lg hover:shadow-xl hover:from-primary/20 hover:to-accent/20 hover:-translate-y-1 transition-all duration-300"
+          >
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+            </span>
+            <span className="font-medium text-primary">In Progress</span>
           </a>
-          <a href="#skills" className="nav-pill">
-            <span className="text-lg">⚡</span>
-            <span>Skills</span>
+          <a 
+            href="#experience" 
+            className="group flex items-center gap-2 px-5 py-3 bg-card/80 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+          >
+            <span className="text-lg group-hover:scale-110 transition-transform">💼</span>
+            <span className="font-medium text-foreground">Experience</span>
           </a>
-          <a href="#contact" className="nav-pill">
-            <span className="text-lg">📬</span>
-            <span>Contact</span>
+          <a 
+            href="#skills" 
+            className="group flex items-center gap-2 px-5 py-3 bg-card/80 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+          >
+            <span className="text-lg group-hover:scale-110 transition-transform">⚡</span>
+            <span className="font-medium text-foreground">Skills</span>
+          </a>
+          <a 
+            href="#contact" 
+            className="group flex items-center gap-2 px-5 py-3 bg-card/80 backdrop-blur-sm border border-border rounded-full shadow-lg hover:shadow-xl hover:bg-card hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+          >
+            <span className="text-lg group-hover:scale-110 transition-transform">📬</span>
+            <span className="font-medium text-foreground">Contact</span>
           </a>
         </nav>
       </div>
