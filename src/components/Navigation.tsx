@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -79,6 +80,8 @@ const Navigation = () => {
             <span>{item.label}</span>
           </button>
         ))}
+        <div className="w-px h-6 bg-border mx-1" />
+        <ThemeToggle />
       </div>
 
       {/* Mobile Navigation */}
@@ -123,6 +126,10 @@ const Navigation = () => {
                 <span>{item.label}</span>
               </button>
             ))}
+            <div className="h-px w-full bg-border my-2" />
+            <div className="flex justify-center">
+              <ThemeToggle />
+            </div>
           </div>
         )}
       </div>
