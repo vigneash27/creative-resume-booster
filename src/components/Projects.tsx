@@ -110,7 +110,7 @@ const Projects = () => {
                       Personal Brand
                     </h3>
                     <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
-                      Building to 10K+
+                      Building to 100K+
                     </span>
                   </div>
                   <p className="text-muted-foreground text-sm leading-relaxed">
