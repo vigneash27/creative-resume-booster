@@ -1,4 +1,5 @@
 import { Mail, Linkedin, MessageCircle, ArrowUpRight } from "lucide-react";
+import { toast } from "sonner";
 import { motion } from "framer-motion";
 
 const Contact = () => {
