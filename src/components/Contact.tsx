@@ -33,14 +33,14 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <a
-            href="mailto:vigneash2019@gmail.com"
+            href="mailto:vigneash2023@gmail.com"
             className="group bg-card rounded-2xl p-6 shadow-soft border border-border card-hover text-center"
           >
             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
               <Mail className="w-6 h-6 text-primary" />
             </div>
             <h3 className="font-semibold text-foreground mb-1">Email</h3>
-            <p className="text-sm text-muted-foreground">vigneash2019@gmail.com</p>
+            <p className="text-sm text-muted-foreground">vigneash2023@gmail.com</p>
             <div className="mt-3 inline-flex items-center gap-1 text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
               Send email <ArrowUpRight className="w-4 h-4" />
             </div>
@@ -88,7 +88,7 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           <a
-            href="mailto:vigneash2019@gmail.com?subject=Let's%20Work%20Together"
+            href="mailto:vigneash2023@gmail.com?subject=Let's%20Work%20Together"
             className="group relative inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full font-medium text-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-foreground/20 hover:scale-105"
           >
             <span className="relative z-10">Start a Conversation</span>
