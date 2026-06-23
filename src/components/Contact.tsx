@@ -71,7 +71,7 @@ const Contact = () => {
               <MessageCircle className="w-6 h-6 text-[#25D366]" />
             </div>
             <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
-            <p className="text-sm text-muted-foreground">+91 6383638254</p>
+            <p className="text-sm text-muted-foreground">xxxxxxxx</p>
             <div className="mt-3 inline-flex items-center gap-1 text-sm text-[#25D366] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
               Chat now <ArrowUpRight className="w-4 h-4" />
             </div>
