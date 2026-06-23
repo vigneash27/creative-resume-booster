@@ -63,11 +63,9 @@ const Contact = () => {
             </div>
           </a>
 
-          <a
-            href="https://wa.me/916383638254"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-card rounded-2xl p-6 shadow-soft border border-border card-hover text-center"
+          <button
+            onClick={() => toast("Please try in some time.")}
+            className="group bg-card rounded-2xl p-6 shadow-soft border border-border card-hover text-center cursor-pointer"
           >
             <div className="w-14 h-14 rounded-2xl bg-[#25D366]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#25D366]/20 transition-colors">
               <MessageCircle className="w-6 h-6 text-[#25D366]" />
@@ -77,7 +75,7 @@ const Contact = () => {
             <div className="mt-3 inline-flex items-center gap-1 text-sm text-[#25D366] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
               Chat now <ArrowUpRight className="w-4 h-4" />
             </div>
-          </a>
+          </button>
         </motion.div>
 
         {/* CTA */}
